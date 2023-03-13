@@ -202,4 +202,4 @@ In the same way, when we use Pellet to reason about an ontology, we don't need t
 | Asymmetric  | Yes       | Yes         | No         | No        | empty      | No        | Yes         |
 | Reflexive   | Yes       | Yes         | Yes        | Yes       | No         | empty     | No          |
 | Irreflexive | Yes       | Yes         | No         | Yes       | Yes        | No        | empty       |
-
+ 
