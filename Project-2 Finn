@@ -12,19 +12,8 @@ Tip #4: Work together as a team.
 1. Let V be a vocabulary of ALCI consisting of a role name "P". Interpret part_of as "x is a part of y". Using this role name, define the following formulas in this language:
 ```
   (a)  PP that says that x is a proper part of y
-  PP ≡ ∃P.~P
-  
-  or 
-  
-  PP ≡ ∃(P⊓~P¯)
-  
-  or
-  
-  PP ≡ P ⊓ ¬P¯
-  
-  or
-  
-  PP ≡ P.~P (I think this is my favored answer)
+
+  PP ≡ P.~P 
   
   (b)  iPP that says that y is a proper part of x
   iPP ≡ PP¯
@@ -34,7 +23,6 @@ Tip #4: Work together as a team.
   
   (d)  O that says that x overlaps y
   O ≡ ∃P¯.(∃P)
-  -I'm worried about this, since I don't know what order you're allowed to read the variables in.
   
   (e)  D that says that x and y are disjoint 
   D ≡ ~O
@@ -116,11 +104,11 @@ Tip #4: Work together as a team.
 
 (c) ∀y(R(x, y) → ∃x(R(y, x) ∧ ∀y(R(x, y) → A(y))))
 
--I'm not sure how to do this one, partly because the first x isn't bound by a quantifier. Here's an attempt: ∀R.∃R.∀R.A
+∀R.∃R.∀R.A
 
 (d) (∀y)(R(x, y) → A(y)) ∧ (∃y)(R(x, y) ∧ B(y))
 
--I have the same problem here as I did with the previous question. Another attempt: (∀R.A) ⊓ (∃R.B)
+(∀R.A) ⊓ (∃R.B)
 ```
 
 4. Provide an interpretation I<sub>1</sub> for ALC and an interpretation I<sub>2</sub> for ALCN - each distinct from any interpretation covered in class so far - and construct a bisimulation that demonstrates ALCN is more expressive than ALC. Use the [mermaid syntax](https://github.com/mermaid-js/mermaid) of markdown to provide a graphical representation of your work. Feel free to use the [mermaid live editor](https://mermaid.live/) when diagramming. 
@@ -216,7 +204,7 @@ in I2
 
 7. There is a delightfully helpful subreddit called "ELI5" which stands for something like "explain it like I'm 5" where users post conceptually challenging questions and other users attempt to provide explanations in simple, jargon-free, terms that presumably a 5 year-old could understand. Using this as a model, explain the _finite model property_. Be sure to provide a simple example and explain when the property might be important, and when it is not so important. 
 ```
-Say that I want to show that Ottawa is the capital of Canada. I could open a map that shows each country's capital to demonstrate this. If that doesn't convince you, we could ask someone from Canada, or even go to Canada ourselves. But to show this, I don't need to know the capital of Australia, or how an internal combustion engine works. There's lots of facts that I don't need to use to show that Canada's capital is Ottawa. If something has a finite model property, then you don't need to use every fact to show it's true. This is important, because computers also try to show that some things are true, but without the finite model property, they would be stuck calculating forever, since they would need to use all the facts.
+Say that I want to show that Ottowa is the capital of Canada. I could open a map that shows each country's capital to demonstrate this. If that doesn't convince you, we could ask someone from Canada, or even go to Canada ourselves. But to show this, I don't need to appeal to an infinite number of facts. Instead, there's only a limited number of facts I would need to show that Canada's capital is Ottawa (ex. that this is a map with capitals, that up-to-date maps are generally reliable, that this is an up-to-date map). If something has a finite model property, then you don't need to use an uncountable number of facts to show it's true. This is important, because computers also try to show that some things are true, but without the finite model property, they would be stuck calculating forever, since they would need to use an infinite number of facts to do this.
 ```
 8. Following up on the preceding , explain the _tree model property_. Be sure to provide a simple example and explain when the property might be important, and when it is not so important. 
 ```
