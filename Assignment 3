@@ -23,7 +23,7 @@ For any question involving the use of Protege, please be sure to import:
       -Has_relative_magnitude. Relative to some entity, and object has a single, particular magnitude.
        
   (e)  Symmetric and Reflexive
-      -Simultaneous_with. I've already explained why this should be reflexive. It's also reflexive, since if t1 is simultaneous with t2, then t2 is also simultaneous with t1.
+      -Simultaneous_with. I've already explained why this should be reflexive. It's also symmetric, since if t1 is simultaneous with t2, then t2 is also simultaneous with t1.
       
 ```
 
@@ -50,7 +50,7 @@ For any question involving the use of Protege, please be sure to import:
 ```
   (a) Sally has an arm Tuesday but does not have an arm Wednesday. 
   
-  -ambiguous, I'm interpreting this as her having no arms on Wednesday
+  on the interpretation of her losing an arm, thereby having no arms on Wednesday:
   
   Sally is instance_of object
   Tuesday is an instance_of one-dimensional temporal region 
@@ -59,6 +59,16 @@ For any question involving the use of Protege, please be sure to import:
   “Sally participates in having at least one arm on Tuesday” is an instance of occurrent 
   “Sally participates in having no arms on Wednesday” is an instance of occurrent
   “Sally participates in having at least one arm on Tuesday precedes Sally participates in having no arms on Wednesday”
+  
+  on the interpretation of her not necessarily losing an arm, where this is merely saying there is at least one arm on Tuesday, and on Wednesday at least one arm is missing:
+  
+  Sally is instance_of object
+  Tuesday is an instance_of one-dimensional temporal region 
+  Wednesday is an instance of one-dimensional temporal region 
+  Arm is an instance of fiat object part
+  “Sally participates in having at least one arm on Tuesday” is an instance of occurrent 
+  “Sally participates in lacking an arm on Wednesday” is an instance of occurrent
+  “Sally participates in having at least one arm on Tuesday precedes Sally participates in lacking an arm on Wednesday”
   
   (b) Every liver has some cell as part at all times it exists.
   
@@ -94,10 +104,12 @@ For any question involving the use of Protege, please be sure to import:
   s: Sally
   
   (b) Every liver has some cell as part at all times it exists.
-  ∀x∃y(Lx→Cy∧Pyx)
+  ∀t∀x∃y(Lx∧E(x,t)→Cy∧Pyx)
   L: liver
   C: cell
   P: part of
+  E (x, t): exists at t
+  
   
   (c) John was a child, then an adult, then a senior. 
  j = John
